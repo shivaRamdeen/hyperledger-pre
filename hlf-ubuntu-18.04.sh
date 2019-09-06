@@ -47,7 +47,7 @@ sudo add-apt-repository \
   # install GO
   wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
   tar -xvf go1.12.7.linux-amd64.tar.gz
-  mv go /usr/local
+  sudo mv go /usr/local
   export GOROOT=/usr/local/go
   export PATH=$GOROOT/bin:$PATH
   
@@ -56,4 +56,6 @@ sudo add-apt-repository \
   sudo apt install npm -y
   
   # install binaries, samples and docker images
-  curl -sSL http://bit.ly/2ysbOFE | bash -s
+  echo "logout and login to effect changes"
+  echo "then run 'curl -sSL http://bit.ly/2ysbOFE | bash -s' to install fabric-samples and binaries"
+  #curl -sSL http://bit.ly/2ysbOFE | bash -s
