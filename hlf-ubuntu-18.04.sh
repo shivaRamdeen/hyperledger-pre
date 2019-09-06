@@ -19,3 +19,23 @@ sudo ./buildconf
 sudo .configure --wish-ssl --with-zlib
 sudo make
 sudo make install
+
+#remove any old versions of docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+#install depts for docker
+sudo apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common
+
+#add docker gpg key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+#add stable repo
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+   
+  sudo apt-get update
+  
+  sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+  #todo: add user executing this script to docker user group to prevent sudo requirement
