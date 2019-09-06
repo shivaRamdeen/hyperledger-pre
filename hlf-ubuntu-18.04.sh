@@ -55,3 +55,5 @@ sudo add-apt-repository \
   sudo apt install nodejs -y
   sudo apt install npm -y
   
+  # install binaries, samples and docker images
+  curl -sSL http://bit.ly/2ysbOFE | bash -s
