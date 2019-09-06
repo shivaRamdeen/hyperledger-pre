@@ -43,3 +43,15 @@ sudo add-apt-repository \
   #install docker-compose
   sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
+  
+  # install GO
+  wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+  tar -xvf go1.12.7.linux-amd64
+  mv go /usr/local
+  export GOROOT=/usr/local/go
+  export PATH=$GOROOT/bin:$PATH
+  
+  #install node and npm
+  sudo apt install nodejs -y
+  sudo apt install npm -y
+  
