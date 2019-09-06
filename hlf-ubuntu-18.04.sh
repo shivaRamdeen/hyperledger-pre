@@ -1,24 +1,24 @@
 #!/bin/bash
 
 #get curl source
-wget https://curl.haxx.se/download/curl-7.65.3.tar.gz
+#wget https://curl.haxx.se/download/curl-7.65.3.tar.gz
 
 #install zlib
-wget https://www.zlib.net/zlib-1.2.11.tar.gz
-tar -xvf zlib-1.2.11.tar.gz
-cd zlib-1.2.11
-./configure
-sudo make
-sudo make install
-cd..
+#wget https://www.zlib.net/zlib-1.2.11.tar.gz
+#tar -xvf zlib-1.2.11.tar.gz
+#cd zlib-1.2.11
+#./configure
+#sudo make
+#sudo make install
+#cd..
 
-sudo apt-get install make libtool libssl-dev -y
-tar -xvf curl-7.65.3.tar.gz
-cd curl-7.65.3
-sudo ./buildconf
-sudo .configure --wish-ssl --with-zlib
-sudo make
-sudo make install
+#sudo apt-get install make libtool libssl-dev -y
+#tar -xvf curl-7.65.3.tar.gz
+#cd curl-7.65.3
+#sudo ./buildconf
+#sudo .configure --wish-ssl --with-zlib
+#sudo make
+#sudo make install
 
 #remove any old versions of docker
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -46,7 +46,7 @@ sudo add-apt-repository \
   
   # install GO
   wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
-  tar -xvf go1.12.7.linux-amd64
+  tar -xvf go1.12.7.linux-amd64.tar.gz
   mv go /usr/local
   export GOROOT=/usr/local/go
   export PATH=$GOROOT/bin:$PATH
